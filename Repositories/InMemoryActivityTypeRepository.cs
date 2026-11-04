@@ -8,8 +8,7 @@ namespace _4VGymEF.Repositories {
             SeedData(); // Precargamos algunos datos de prueba
         }
 
-        private void SeedData()
-        {
+        private void SeedData() {
             _activityTypes = new List<ActivityType>()
             {
                 new ActivityType (_nextId++, "BodyPump",  2 ),
@@ -17,6 +16,25 @@ namespace _4VGymEF.Repositories {
                 new ActivityType { Id = _nextId++, Name = "Pilates", NumberMonitors = 1 }
             };
             _activityTypes.Add(new ActivityType(40, "CrossFit", 3));
+        }
+
+        public IEnumerable<ActivityType> GetAll() {
+            return _activityTypes;
+        }
+
+        /// <summary>
+        /// Guarda un nuevo tipo de actividad generando su ID de forma automática. (Autonumerico)
+        /// </summary>
+        /// <param name="activityType">Objeto con los datos a guardar (sin ID o con ID no asignado).</param>
+        /// <returns>La entidad guardada con su ID autogenerado.</returns>
+        public ActivityType Add(ActivityType activityType) {
+            // Asignamos el ID autoincremental en la capa de datos, o sea que machacamos el que venia
+            activityType.Id = _nextId++;
+
+            _activityTypes.Add(activityType);
+
+            // Devolvemos el objeto completo tal como se ha guardado
+            return activityType;
         }
 
     }
