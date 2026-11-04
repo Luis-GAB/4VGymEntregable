@@ -37,5 +37,19 @@ namespace _4VGymEF.Repositories {
             return activityType;
         }
 
+        // Método para obtener todos los tipos de actividades por Nombre
+        public ActivityType? GetByName(string name) {
+            return _activityTypes.SingleOrDefault(at =>
+                            string.Equals(at.Name, name, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public ActivityType? GetById(int? id) {
+            if (id == null)
+                return null;
+
+            return _activityTypes
+                .SingleOrDefault(i => i.Id == id); // FistOrDefault mejor que Where
+        }
+
     }
 }
