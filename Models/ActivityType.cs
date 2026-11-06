@@ -1,11 +1,15 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace _4VGymEF.Models {
+namespace _4VGymEntregable.Models {
     public class ActivityType {
+
+        [JsonPropertyName("id")]
         public int Id { get; set; }
 
+        [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
 
+        [JsonPropertyName("number-monitors")]
         public int NumberMonitors { get; set; } = 1;
 
         public ICollection<Activity> Activities { get; set; } = new List<Activity>();
@@ -13,6 +17,7 @@ namespace _4VGymEF.Models {
         public ActivityType() {
 
         }
+
         public ActivityType(int id, string name, int numberMonitors) {
             Id = id;
             Name = name;

@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gayta\\Downloads\\2DAM_AD_26-27-main\\2DAM_AD_26-27-main\\nuevo\\4VGymEntregable\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\gayta\\Desktop\\LuisGAB\\Informatica\\Acceso a datos\\4VGymEntregable\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D1E3E1B0-F62B-0415-C41D-856B345E3087}|4VGymEntregable.csproj|c:\\users\\gayta\\desktop\\luisgab\\informatica\\acceso a datos\\4vgymentregable\\repositories\\inmemoryactivitytyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1E3E1B0-F62B-0415-C41D-856B345E3087}|4VGymEntregable.csproj|solutionrelative:repositories\\inmemoryactivitytyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1E3E1B0-F62B-0415-C41D-856B345E3087}|4VGymEntregable.csproj|c:\\users\\gayta\\desktop\\luisgab\\informatica\\acceso a datos\\4vgymentregable\\models\\activitytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1E3E1B0-F62B-0415-C41D-856B345E3087}|4VGymEntregable.csproj|solutionrelative:models\\activitytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,6 +75,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InMemoryActivityTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\gayta\\Desktop\\LuisGAB\\Informatica\\Acceso a datos\\4VGymEntregable\\Repositories\\InMemoryActivityTypeRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\InMemoryActivityTypeRepository.cs",
+              "ToolTip": "C:\\Users\\gayta\\Desktop\\LuisGAB\\Informatica\\Acceso a datos\\4VGymEntregable\\Repositories\\InMemoryActivityTypeRepository.cs",
+              "RelativeToolTip": "Repositories\\InMemoryActivityTypeRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwAcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T08:19:25.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ActivityType.cs",
+              "DocumentMoniker": "C:\\Users\\gayta\\Desktop\\LuisGAB\\Informatica\\Acceso a datos\\4VGymEntregable\\Models\\ActivityType.cs",
+              "RelativeDocumentMoniker": "Models\\ActivityType.cs",
+              "ToolTip": "C:\\Users\\gayta\\Desktop\\LuisGAB\\Informatica\\Acceso a datos\\4VGymEntregable\\Models\\ActivityType.cs",
+              "RelativeToolTip": "Models\\ActivityType.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswA8AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-03T08:18:43.071Z",
+              "EditorCaption": ""
             }
           ]
         }

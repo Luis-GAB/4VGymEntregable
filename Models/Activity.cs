@@ -2,7 +2,7 @@
 using System.Text.Json.Serialization;
 using _4VGymEF.Validations;
 
-namespace _4VGymEF.Models
+namespace _4VGymEntregable.Models
 {
     public class Activity
     {
