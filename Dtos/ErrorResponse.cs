@@ -1,9 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace _4VGymEF.Models
-{
-    public class ErrorResponse
-    {
+namespace _4VGymEntregable.Models {
+    public class ErrorResponse {
 
         [JsonPropertyName("code")]
         public long Code { get; set; }
@@ -11,8 +9,7 @@ namespace _4VGymEF.Models
         [JsonPropertyName("description")]
         public string Description { get; set; } = string.Empty;
 
-        public ErrorResponse(int code, string description)
-        {
+        public ErrorResponse(int code, string description) {
             this.Code = code;
             this.Description = description;
         }

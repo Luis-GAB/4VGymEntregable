@@ -1,6 +1,6 @@
-﻿using _4VGymEF.Models;
+﻿using _4VGymEntregable.Models;
 
-namespace _4VGymEF.Repositories {
+namespace _4VGymEntregable.Repositories {
     public class InMemoryActivityTypeRepository {
         private List<ActivityType> _activityTypes = new();
         private int _nextId = 1; // Para el autonumerico

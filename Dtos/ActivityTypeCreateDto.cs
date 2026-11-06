@@ -1,9 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace _4VGymEF.Models
-{
-    public class ActivityTypeCreateDto
-    {
+namespace _4VGymEntregable.Models {
+    public class ActivityTypeCreateDto {
         [JsonPropertyName("id")]
         public int Id { get; set; }
 
