@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
-using _4VGymEF.Validations;
+using _4VGymEntregable.Validations;
 
-namespace _4VGymEF.Models
-{
-    public class ActivityCreateDto
-    {
+namespace _4VGymEF.Models {
+    public class ActivityCreateDto {
         public int Id { get; set; }
 
         [JsonPropertyName("activity_type_id")]
