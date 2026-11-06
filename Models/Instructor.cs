@@ -20,5 +20,21 @@ namespace _4VGymEntregable.Models {
 
         public ICollection<Activity> Activities { get; set; } = new List<Activity>();
 
+        public Instructor() {
+            
+        }
+        public Instructor(int id, string name, string email, string photoUrl, string phone) {
+            Id = id;
+            Name = name;
+            Email = email;
+            PhotoUrl = photoUrl;
+            Phone = phone;
+        }
+
+        public bool isEmpty() {
+            return (string.IsNullOrEmpty(Name) && string.IsNullOrEmpty(Email)
+                && string.IsNullOrEmpty(PhotoUrl) && string.IsNullOrEmpty(Phone));
+        }
+
     }
 }
