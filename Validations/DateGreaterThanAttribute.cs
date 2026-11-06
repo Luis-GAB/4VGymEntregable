@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
-namespace _4VGymEF.Validations
+namespace _4VGymEntregable.Validations
 {
     /// <summary>
     /// Valida que una fecha sea posterior a otra propiedad de tipo DateTime del mismo objeto.

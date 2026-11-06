@@ -11,8 +11,7 @@ namespace _4VGymEntregable.Models {
         [JsonPropertyName("number-monitors")]
         public int NumberMonitors { get; set; } = 1;
 
-        public ActivityTypeCreateDto()
-        {
+        public ActivityTypeCreateDto(){
         }
         public ActivityTypeCreateDto(int id, string name, int numberMonitors)
         {

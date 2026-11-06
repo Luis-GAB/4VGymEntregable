@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace _4VGymEF.Validations
+namespace _4VGymEntregable.Validations
 {
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
     public class FutureDateAttribute : ValidationAttribute
