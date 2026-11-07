@@ -4,15 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using _4VGymEF.Data;
+using _4VGymEntregable.Data;
 
 #nullable disable
 
-namespace _4VGymEF.Migrations
-{
+namespace _4VGymEF.Migrations {
     [DbContext(typeof(GymDbContext))]
-    partial class GymDbContextModelSnapshot : ModelSnapshot
-    {
+    partial class GymDbContextModelSnapshot : ModelSnapshot {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

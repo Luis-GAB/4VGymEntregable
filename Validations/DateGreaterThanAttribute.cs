@@ -1,34 +1,28 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
-namespace _4VGymEntregable.Validations
-{
+namespace _4VGymEntregable.Validations {
     /// <summary>
     /// Valida que una fecha sea posterior a otra propiedad de tipo DateTime del mismo objeto.
     /// </summary>
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
-    public class DateGreaterThanAttribute : ValidationAttribute
-    {
+    public class DateGreaterThanAttribute : ValidationAttribute {
         private readonly string _comparisonProperty;
 
-        public DateGreaterThanAttribute(string comparisonProperty)
-        {
+        public DateGreaterThanAttribute(string comparisonProperty) {
             _comparisonProperty = comparisonProperty;
         }
 
-        protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
-        {
+        protected override ValidationResult? IsValid(object? value, ValidationContext validationContext) {
             // Dejamos pasar valores nulos; la responsabilidad de obligar el campo es de [Required]
-            if (value is null)
-            {
+            if (value is null) {
                 return ValidationResult.Success;
             }
 
             // 1. Obtener la propiedad con la que se quiere comparar usando Reflexión
             PropertyInfo? propertyInfo = validationContext.ObjectType.GetProperty(_comparisonProperty);
 
-            if (propertyInfo is null)
-            {
+            if (propertyInfo is null) {
                 return new ValidationResult($"La propiedad con el nombre '{_comparisonProperty}' no existe.");
             }
 
@@ -36,10 +30,8 @@ namespace _4VGymEntregable.Validations
             object? comparisonValue = propertyInfo.GetValue(validationContext.ObjectInstance, null);
 
             // 3. Validar si los tipos son DateTime y realizar la comparación
-            if (value is DateTime fechaFin && comparisonValue is DateTime fechaInicio)
-            {
-                if (fechaFin > fechaInicio)
-                {
+            if (value is DateTime fechaFin && comparisonValue is DateTime fechaInicio) {
+                if (fechaFin > fechaInicio) {
                     return ValidationResult.Success;
                 }
 

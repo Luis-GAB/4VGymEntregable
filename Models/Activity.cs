@@ -23,11 +23,11 @@ namespace _4VGymEntregable.Models {
         [JsonPropertyName("instructors_id")]
         [Required(ErrorMessage = "26|La lista de monitores no puede ser nula.")]
         [MinLength(1, ErrorMessage = "27|La actividad debe tener asignado al menos un monitor.")]
-        public ICollection<Instructor> Instructors { get; set; } = new List<Instructor>();
+        public required List<int> InstructorsId { get; set; }
 
         [JsonPropertyName("activity_type_id")]
         [Required(ErrorMessage = "30|La tipo de actividad es obligatorio.")]
-        public ActivityType? ActivityType { get; set; }
+        public int? ActivityTypeId { get; set; }
 
 
     }

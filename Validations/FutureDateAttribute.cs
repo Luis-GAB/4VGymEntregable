@@ -1,23 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace _4VGymEntregable.Validations
-{
+namespace _4VGymEntregable.Validations {
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
-    public class FutureDateAttribute : ValidationAttribute
-    {
-        protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
-        {
+    public class FutureDateAttribute : ValidationAttribute {
+        protected override ValidationResult? IsValid(object? value, ValidationContext validationContext) {
             // Si el valor es nulo, dejamos que la responsabilidad de requerirlo sea del atributo [Required]
-            if (value is null)
-            {
+            if (value is null) {
                 return ValidationResult.Success;
             }
 
-            if (value is DateTime fechaIngresada)
-            {
+            if (value is DateTime fechaIngresada) {
                 // Comparación directa con la fecha/hora actual del sistema
-                if (fechaIngresada > DateTime.Now)
-                {
+                if (fechaIngresada > DateTime.Now) {
                     return ValidationResult.Success;
                 }
 

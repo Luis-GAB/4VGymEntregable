@@ -1,5 +1,6 @@
-using _4VGymEF.Data;
+using _4VGymEntregable.Data;
 using _4VGymEntregable.Models;
+using _4VGymEntregable.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,8 +19,7 @@ builder.Services.AddControllers()
                     // Intentamos separar "1001|Mensaje de error"
                     var parts = error.ErrorMessage.Split('|');
 
-                    if (parts.Length == 2 && int.TryParse(parts[0], out int parsedCode))
-                    {
+                    if (parts.Length == 2 && int.TryParse(parts[0], out int parsedCode)) {
                         return new ErrorResponse(parsedCode, parts[1]);
                     }
 
@@ -36,17 +36,22 @@ builder.Services.AddControllers()
 // Añadir el soporte a OpenAPI:  https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-// Registro de Entity Framework Core (DbContext)
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection"); // DefaultConnection: Es el nombre de la cadena de conexión definida en el archivo appsettings.json
+// Inyección de la clase de repositorio concreta (Singleton para mantener los datos en memoria)
+builder.Services.AddSingleton<InMemoryActivityTypeRepository>();
+builder.Services.AddSingleton<InMemoryInstructorRepository>();
+builder.Services.AddSingleton<InMemoryActivityRepository>();
+
+
+// Si usasemos la base de datos: Registro de Entity Framework Core (DbContext)
+//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection"); // DefaultConnection: Es el nombre de la cadena de conexión definida en el archivo appsettings.json
 // Registrar el DbContext
-builder.Services.AddDbContext<GymDbContext>(options => options.UseSqlServer(connectionString));
+//builder.Services.AddDbContext<GymDbContext>(options => options.UseSqlServer(connectionString));
 
 
 // Contruir la aplicacion
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
+if (app.Environment.IsDevelopment()) {
     // 1. Expone el endpoint del documento OpenAPI nativo (ej: /openapi/v1.json)
     app.MapOpenApi();
 

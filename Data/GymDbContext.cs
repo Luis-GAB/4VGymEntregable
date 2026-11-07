@@ -1,10 +1,8 @@
-﻿using _4VGymEF.Models;
+﻿using _4VGymEntregable.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace _4VGymEF.Data
-{
-    public class GymDbContext : DbContext
-    {
+namespace _4VGymEntregable.Data {
+    public class GymDbContext : DbContext {
         public GymDbContext(DbContextOptions<GymDbContext> options)
             : base(options)
         {
